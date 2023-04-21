@@ -22,12 +22,5 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage('Deploy'){
-            steps{
-                ls
-                pwd
-                sh 'java -jar /var/jenkins_home/workspace/PetClinicDeclarative/target/*.jar'
-            }
-        }
     }
 }
